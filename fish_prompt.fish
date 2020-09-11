@@ -26,7 +26,7 @@ function fish_prompt
   else if [ (id -u) = "0" ]
     echo -n (set_color --bold green)"# "
   else if not test -e (jobs -l)
-    echo -n (set_color --bold yellow)(jobs -l | wc -l) (bold_green)"\$ "
+    echo -n (set_color --bold yellow)(jobs -l | wc -l) (set_color --bold green)"\$ "
   else
     echo -n (set_color --bold green)"\$ "
   end
